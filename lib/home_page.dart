@@ -6,8 +6,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Ola mundo'),
+      backgroundColor: Colors.deepPurple,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Pode entrar',
+          ),
+          Text('0')
+        ],
       ),
     );
   }
