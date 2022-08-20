@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int count = 0;
+
   void decrement() {
+    count--;
     print('decrement');
   }
 
   void increment() {
+    count++;
     print('increment');
   }
 
@@ -42,10 +51,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(20),
               child: Text(
-                '0',
+                count.toString(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 100,
