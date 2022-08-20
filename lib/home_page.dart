@@ -18,20 +18,26 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Pode entrar',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
+          const Padding(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              'Pode entrar',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
-          const Text(
-            '0',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 100,
-              fontWeight: FontWeight.w300,
+          const Padding(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              '0',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 100,
+                fontWeight: FontWeight.w300,
+              ),
             ),
           ),
           Row(
