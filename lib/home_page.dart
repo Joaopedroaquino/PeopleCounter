@@ -35,9 +35,11 @@ class _HomePageState extends State<HomePage> {
         shadowColor: Colors.red,
         centerTitle: true,
         elevation: 3,
-        title: Text(isFull
-            ? 'A sala excedeu o total de $count pessoas'
-            : 'Total de pessoas: $count'),
+        title: Text(isEmpty
+            ? 'Sala vazia'
+            : isFull
+                ? 'A sala excedeu o total de $count pessoas'
+                : 'Total de pessoas: $count'),
         bottomOpacity: 1,
       ),
 
@@ -61,7 +63,11 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                isFull ? 'Lotado' : 'Pode entrar!',
+                isEmpty
+                    ? 'A sala esta vazia'
+                    : isFull
+                        ? 'Lotado'
+                        : 'Pode entrar!',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 30,
