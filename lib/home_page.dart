@@ -12,6 +12,11 @@ class HomePage extends StatelessWidget {
         children: [
           Text(
             'Pode entrar',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.w800,
+            ),
           ),
           Text('0')
         ],
