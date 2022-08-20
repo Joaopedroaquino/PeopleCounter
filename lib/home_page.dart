@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Pode entrar',
             style: TextStyle(
               color: Colors.white,
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-          Text(
+          const Text(
             '0',
             style: TextStyle(
               color: Colors.white,
@@ -38,13 +38,36 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
+                  style: TextButton.styleFrom(
+                    primary: Colors.purple,
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                  ),
                   onPressed: increment,
-                  child: Text(
+                  child: const Text(
                     'Entrou',
+                    style: TextStyle(color: Colors.black, fontSize: 16),
                   )),
+              const SizedBox(
+                width: 30,
+              ),
               TextButton(
+                style: TextButton.styleFrom(
+                  primary: Colors.purple,
+                  backgroundColor: Colors.white,
+                  fixedSize: const Size(100, 100),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                ),
                 onPressed: decrement,
-                child: Text('Saiu'),
+                child: const Text(
+                  'Saiu',
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
               ),
             ],
           )
