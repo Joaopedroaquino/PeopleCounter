@@ -11,13 +11,17 @@ class _HomePageState extends State<HomePage> {
   int count = 0;
 
   void decrement() {
-    count--;
-    print('decrement');
+    setState(() {
+      count--;
+    });
+    print('$count');
   }
 
   void increment() {
-    count++;
-    print('increment');
+    setState(() {
+      count++;
+    });
+    print('$count');
   }
 
   @override
