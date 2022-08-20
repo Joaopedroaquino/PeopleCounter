@@ -24,6 +24,9 @@ class _HomePageState extends State<HomePage> {
     print('$count');
   }
 
+  bool get isEmpty => count == 0;
+  bool get isFull => count == 20;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,10 +47,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(20),
               child: Text(
-                'Pode entrar',
+                isFull ? 'Lotado' : 'Pode entrar!',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -78,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(24),
                       ),
                     ),
-                    onPressed: increment,
+                    onPressed: isFull ? null : increment,
                     child: const Text(
                       'Entrou',
                       style: TextStyle(color: Colors.black, fontSize: 16),
@@ -89,13 +92,13 @@ class _HomePageState extends State<HomePage> {
                 TextButton(
                   style: TextButton.styleFrom(
                     primary: Colors.purple,
-                    backgroundColor: Colors.white,
+                    backgroundColor: isEmpty ? Colors.grey : Colors.white,
                     fixedSize: const Size(100, 100),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),
                     ),
                   ),
-                  onPressed: decrement,
+                  onPressed: isEmpty ? null : decrement,
                   child: const Text(
                     'Saiu',
                     style: TextStyle(color: Colors.black, fontSize: 16),
