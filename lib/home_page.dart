@@ -31,11 +31,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: isFull ? Colors.red : Colors.green,
         shadowColor: Colors.red,
         centerTitle: true,
-        title: const Text('Contador de pessoas'),
+        elevation: 3,
+        title: Text(isFull
+            ? 'A sala excedeu o total de $count pessoas'
+            : 'Total de pessoas: $count'),
+        bottomOpacity: 1,
       ),
+
       //backgroundColor: Colors.deepPurple,
       body: Container(
         decoration: const BoxDecoration(
