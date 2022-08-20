@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(20),
               child: Text(
                 isFull ? 'Lotado' : 'Pode entrar!',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 30,
                   fontWeight: FontWeight.w700,
