@@ -30,6 +30,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.purple,
+        shadowColor: Colors.red,
+        centerTitle: true,
+        title: const Text('Contador de pessoas'),
+      ),
       //backgroundColor: Colors.deepPurple,
       body: Container(
         decoration: const BoxDecoration(
