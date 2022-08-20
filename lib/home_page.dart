@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  void decrement() {
+    print('decrement');
+  }
+
+  void increment() {
+    print('increment');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,15 +35,16 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                  onPressed: () {},
+                  onPressed: increment,
                   child: Text(
-                    'data',
+                    'Entrou',
                   )),
               TextButton(
-                onPressed: () {},
-                child: Text('data2'),
+                onPressed: decrement,
+                child: Text('Saiu'),
               ),
             ],
           )
