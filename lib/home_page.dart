@@ -43,6 +43,26 @@ class _HomePageState extends State<HomePage> {
         bottomOpacity: 1,
       ),
 
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: '',
+          ),
+        ],
+        //currentIndex: _selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        //onTap: _onItemTapped,
+      ),
+
       //backgroundColor: Colors.deepPurple,
       body: Container(
         decoration: const BoxDecoration(
