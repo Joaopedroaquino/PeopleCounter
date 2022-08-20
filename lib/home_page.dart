@@ -15,10 +15,30 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w700,
             ),
           ),
-          Text('0')
+          Text(
+            '0',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 100,
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+          Row(
+            children: [
+              TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'data',
+                  )),
+              TextButton(
+                onPressed: () {},
+                child: Text('data2'),
+              ),
+            ],
+          )
         ],
       ),
     );
