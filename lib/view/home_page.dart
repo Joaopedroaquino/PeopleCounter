@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+
+import '../controller/counter_store.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,6 +29,8 @@ class _HomePageState extends State<HomePage> {
 
   bool get isEmpty => count == 0;
   bool get isFull => count == 20;
+
+  final Counter counter = Counter();
 
   @override
   Widget build(BuildContext context) {
@@ -86,31 +91,33 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                isEmpty
-                    ? 'A sala esta vazia'
-                    : isFull
-                        ? 'Lotado'
-                        : 'Pode entrar!',
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
+                padding: const EdgeInsets.all(20),
+                child: Observer(
+                  builder: (_) => Text(
+                    isEmpty
+                        ? 'A sala esta vazia'
+                        : isFull
+                            ? 'Lotado'
+                            : 'Pode entrar!',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                )),
             Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                count.toString(),
-                style: TextStyle(
-                  color: isFull ? Colors.red : Colors.white,
-                  fontSize: 100,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-            ),
+                padding: const EdgeInsets.all(20),
+                child: Observer(
+                  builder: (_) => Text(
+                    '${counter.count}',
+                    style: TextStyle(
+                      color: isFull ? Colors.red : Colors.white,
+                      fontSize: 100,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                )),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
