@@ -141,7 +141,8 @@ class _HomePageState extends State<HomePage> {
                 TextButton(
                   style: TextButton.styleFrom(
                     primary: Colors.purple,
-                    backgroundColor: isEmpty ? Colors.white : Colors.white,
+                    backgroundColor:
+                        counter.isEmpty ? Colors.grey : Colors.white,
                     fixedSize: const Size(100, 100),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),

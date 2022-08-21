@@ -8,6 +8,10 @@ abstract class _CounterBase with Store {
   @observable
   int count = 0;
 
+  bool get isEmpty => count == 0;
+
+  bool get isFull => count == 20;
+
   @action
   void increment() {
     count++;
