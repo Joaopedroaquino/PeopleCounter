@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(24),
                       ),
                     ),
-                    onPressed: isFull ? null : increment,
+                    onPressed: isFull ? null : counter.increment,
                     child: const Text(
                       'Entrou',
                       style: TextStyle(color: Colors.black, fontSize: 16),
@@ -147,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(24),
                     ),
                   ),
-                  onPressed: isEmpty ? null : decrement,
+                  onPressed: isEmpty ? null : counter.decrement,
                   child: const Text(
                     'Saiu',
                     style: TextStyle(color: Colors.black, fontSize: 16),
