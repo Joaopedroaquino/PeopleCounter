@@ -44,22 +44,27 @@ class _HomePageState extends State<HomePage> {
       ),
 
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        backgroundColor: isEmpty
+            ? Colors.green
+            : isFull
+                ? Colors.red
+                : Colors.green,
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: isFull ? Icon(Icons.close_sharp) : Icon(Icons.home),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: isFull ? Icon(Icons.close_sharp) : Icon(Icons.business),
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: isFull ? Icon(Icons.close_sharp) : Icon(Icons.school),
             label: '',
           ),
         ],
         //currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.blue[800],
         //onTap: _onItemTapped,
       ),
 
