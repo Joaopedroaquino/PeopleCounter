@@ -1,4 +1,5 @@
 import 'package:mobx/mobx.dart';
+
 part 'counter_store.g.dart';
 
 class Counter = _CounterBase with _$Counter;
