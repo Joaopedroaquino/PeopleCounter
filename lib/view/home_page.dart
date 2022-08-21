@@ -124,7 +124,8 @@ class _HomePageState extends State<HomePage> {
                 TextButton(
                     style: TextButton.styleFrom(
                       primary: Colors.purple,
-                      backgroundColor: isFull ? Colors.red : Colors.white,
+                      backgroundColor:
+                          counter.isFull ? Colors.red : Colors.white,
                       fixedSize: const Size(100, 100),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(24),
@@ -148,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(24),
                     ),
                   ),
-                  onPressed: counter.decrement,
+                  onPressed: counter.isEmpty ? null : counter.decrement,
                   child: const Text(
                     'Saiu',
                     style: TextStyle(color: Colors.black, fontSize: 16),

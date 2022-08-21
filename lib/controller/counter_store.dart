@@ -7,9 +7,9 @@ class Counter = _CounterBase with _$Counter;
 abstract class _CounterBase with Store {
   @observable
   int count = 0;
-
+  @computed
   bool get isEmpty => count == 0;
-
+  @computed
   bool get isFull => count == 20;
 
   @action
