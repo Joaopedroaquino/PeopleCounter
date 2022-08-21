@@ -141,13 +141,13 @@ class _HomePageState extends State<HomePage> {
                 TextButton(
                   style: TextButton.styleFrom(
                     primary: Colors.purple,
-                    backgroundColor: isEmpty ? Colors.grey : Colors.white,
+                    backgroundColor: isEmpty ? Colors.white : Colors.white,
                     fixedSize: const Size(100, 100),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(24),
                     ),
                   ),
-                  onPressed: isEmpty ? null : counter.decrement,
+                  onPressed: counter.decrement,
                   child: const Text(
                     'Saiu',
                     style: TextStyle(color: Colors.black, fontSize: 16),
