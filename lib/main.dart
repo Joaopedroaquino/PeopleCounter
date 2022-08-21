@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:people_counter/home_page.dart';
+import 'package:people_counter/view/home_page.dart';
 
 void main() {
   runApp(
